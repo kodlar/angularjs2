@@ -1,4 +1,4 @@
-System.register(['angular2/core', './lessons.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './components/lessons.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -27,7 +27,8 @@ System.register(['angular2/core', './lessons.component'], function(exports_1, co
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: '<h1>Hoş Geldiniz!</h1><lesson></lesson>',
+                        //template: '<h1>Hoş Geldiniz!</h1><lesson></lesson>',
+                        templateUrl: 'app/templates/home/app.html',
                         directives: [lessons_component_1.LessonsComponent]
                     }), 
                     __metadata('design:paramtypes', [])
