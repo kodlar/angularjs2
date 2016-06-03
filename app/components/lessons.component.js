@@ -1,4 +1,4 @@
-System.register(['angular2/core', '../services/course.service'], function(exports_1, context_1) {
+System.register(['angular2/core', '../services/course.service', '../directives/grow-onfocus.directive'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', '../services/course.service'], function(export
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, course_service_1;
+    var core_1, course_service_1, grow_onfocus_directive_1;
     var LessonsComponent;
     return {
         setters:[
@@ -19,6 +19,9 @@ System.register(['angular2/core', '../services/course.service'], function(export
             },
             function (course_service_1_1) {
                 course_service_1 = course_service_1_1;
+            },
+            function (grow_onfocus_directive_1_1) {
+                grow_onfocus_directive_1 = grow_onfocus_directive_1_1;
             }],
         execute: function() {
             LessonsComponent = (function () {
@@ -40,8 +43,9 @@ System.register(['angular2/core', '../services/course.service'], function(export
                 LessonsComponent = __decorate([
                     core_1.Component({
                         selector: 'lesson',
-                        template: "<h2> Dersler </h2>\n    Son G\u00FCncellenme Zaman\u0131: {{LocalTime}}\n    <ul>\n        <li *ngFor=\"#course of courses\">\n            {{course.name}} : {{course.hours}} saatlik e\u011Fitim.\n        </li>\n    </ul>\n    ",
-                        providers: [course_service_1.CourseService]
+                        template: "<h2> Dersler </h2>\n    Son G\u00FCncellenme Zaman\u0131: {{LocalTime}}\n    <div><b>&nbsp;&nbsp;Yeni Kurs:</b></div>\n    <div>&nbsp;&nbsp;<input type=\"text\" growonFocus style=\"width:120px\"/></div>\n    <ul>\n        <li *ngFor=\"#course of courses\">\n            {{course.name}} : {{course.hours}} saatlik e\u011Fitim.\n        </li>\n    </ul>\n    ",
+                        providers: [course_service_1.CourseService],
+                        directives: [grow_onfocus_directive_1.GrowOnfocusDirective]
                     }), 
                     __metadata('design:paramtypes', [course_service_1.CourseService])
                 ], LessonsComponent);
