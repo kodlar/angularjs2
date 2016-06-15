@@ -1,4 +1,4 @@
-System.register(['angular2/core', './components/lessons.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './components/lessons.component', './components/students'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './components/lessons.component'], function(ex
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, lessons_component_1;
+    var core_1, lessons_component_1, students_1;
     var AppComponent;
     return {
         setters:[
@@ -19,6 +19,9 @@ System.register(['angular2/core', './components/lessons.component'], function(ex
             },
             function (lessons_component_1_1) {
                 lessons_component_1 = lessons_component_1_1;
+            },
+            function (students_1_1) {
+                students_1 = students_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -29,7 +32,7 @@ System.register(['angular2/core', './components/lessons.component'], function(ex
                         selector: 'my-app',
                         //template: '<h1>Hoş Geldiniz!</h1><lesson></lesson>',
                         templateUrl: 'app/templates/home/app.html',
-                        directives: [lessons_component_1.LessonsComponent]
+                        directives: [lessons_component_1.LessonsComponent, students_1.StudentsComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

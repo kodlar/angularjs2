@@ -3,8 +3,8 @@
   <head>
     <title>AngularJs 2 Öğren</title>
 
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-
+    <!--<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <!-- 1. Load libraries -->
     <!-- IE required polyfills, in this exact order -->
     <script src="node_modules/es6-shim/es6-shim.min.js"></script>
@@ -18,15 +18,14 @@
     <!-- 2. Configure SystemJS -->
     <script>
       System.config({
-        packages: {        
+        packages: {
           app: {
             format: 'register',
             defaultExtension: 'js'
           }
         }
       });
-      System.import('app/boot')
-            .then(null, console.error.bind(console));
+      System.import('app/boot').then(null, console.error.bind(console));
     </script>
 
   </head>
@@ -35,5 +34,7 @@
   <body>
     <my-app>Yükleniyor...</my-app>
   </body>
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </html>
